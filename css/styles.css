@@ -10980,3 +10980,33 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+@media (max-width: 991.98px) {
+  body {
+    /* Increased to make space for the profile picture in the navbar */
+    padding-top: 4.25rem;
+  }
+
+  /* Show the container of the profile image */
+  #sideNav .navbar-brand .d-none.d-lg-block {
+    display: block !important;
+  }
+
+  /* Hide the text name to avoid clutter, as the image is now visible */
+  #sideNav .navbar-brand .d-block.d-lg-none {
+    display: none !important;
+  }
+
+  /* Adjust padding for the navbar brand to fit the image */
+  #sideNav .navbar-brand {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Style the profile image for the mobile navbar */
+  #sideNav .navbar-brand .img-profile {
+    max-width: 3rem;
+    max-height: 3rem;
+    border: 0.3rem solid rgba(255, 255, 255, 0.2);
+  }
+}

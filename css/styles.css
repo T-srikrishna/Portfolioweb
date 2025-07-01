@@ -3139,7 +3139,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #6c757d;
   --bs-btn-disabled-border-color: transparent;
   --bs-btn-box-shadow: none;
-  --bs-btn-focus-shadow-rgb: 161, 79, 48;
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
   text-decoration: underline;
 }
 .btn-link:focus-visible {
@@ -11009,4 +11009,12 @@ section.resume-section .resume-section-content {
     max-height: 3rem;
     border: 0.3rem solid rgba(255, 255, 255, 0.2);
   }
+}
+.project-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

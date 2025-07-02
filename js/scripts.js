@@ -31,4 +31,25 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Corrects scroll position when using the back button.
+    const scrollToHash = (hash) => {
+        // Find the target element using the hash
+        const elementToScroll = document.querySelector(hash);
+        if (elementToScroll) {
+            // A small timeout helps ensure the browser has finished rendering
+            // layout changes (like loading images) before it tries to scroll.
+            setTimeout(() => {
+                elementToScroll.scrollIntoView({
+                    behavior: 'auto',
+                    block: 'start'
+                });
+            }, 100);
+        }
+    };
+
+    // When the hash changes (e.g., from back/forward button), scroll to the new hash.
+    window.addEventListener('hashchange', () => {
+        scrollToHash(window.location.hash);
+    });
+
 });

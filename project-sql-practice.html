@@ -125,8 +125,8 @@
                     </tr>
                     <tr>
                         <td>Are there films in stock that are never rented?</td>
-                        <td><code>LEFT JOIN</code> with <code>NULL</code> filter / <code>NOT EXISTS</code></td>
-                        <td>Found over 100 films in inventory with zero rental history, highlighting an opportunity for cost savings by reducing stock.</td>
+                        <td><code>LEFT JOIN</code> with <code>IS NULL</code> and <code>GROUP BY</code></td>
+                        <td>No films in inventory were found without rental history, indicating strong rental circulation and efficient stock usage.</td>
                     </tr>
                     <tr>
                         <td>How is rental revenue trending month-over-month?</td>
@@ -166,14 +166,14 @@
                 </div>
                 <div class="carousel-item">
                     <figure class="text-center">
-                        <img src="assets/SQL_outputs/sql-output-3-unrented-films.png" class="d-block w-100 rounded shadow-sm" alt="Screenshot of SQL query output listing films in inventory but never rented.">
-                        <figcaption class="output-caption mt-2"><strong>Fig 3:</strong> A list of films available in inventory but never rented.</figcaption>
+                        <img src="assets/SQL_outputs/sql-output-3-unrented-films.png" class="d-block w-100 rounded shadow-sm" alt="Screenshot of SQL query output showing staff performance by transaction count.">
+                        <figcaption class="output-caption mt-2"><strong>Fig 3:</strong> Staff members ranked by the total number of transactions processed.</figcaption>
                     </figure>
                 </div>
                 <div class="carousel-item">
                     <figure class="text-center">
-                        <img src="assets/SQL_outputs/sql-output-4-staff-performance.png" class="d-block w-100 rounded shadow-sm" alt="Screenshot of SQL query output showing staff performance by transaction count.">
-                        <figcaption class="output-caption mt-2"><strong>Fig 4:</strong> Staff members ranked by the total number of transactions processed.</figcaption>
+                        <img src="assets/SQL_outputs/sql-output-4-staff-performance.png" class="d-block w-100 rounded shadow-sm" alt="Screenshot of SQL query output listing films in inventory but never rented.">
+                        <figcaption class="output-caption mt-2"><strong>Fig 4:</strong> A list of films available in inventory but never rented.</figcaption>
                     </figure>
                 </div>
             </div>
@@ -199,7 +199,6 @@
         </p>
         <ul>
           <li><strong>Marketing:</strong> Focus promotional efforts on the top-performing film categories and specific popular titles to maximize revenue.</li>
-          <li><strong>Inventory Management:</strong> Retire or discount the 124+ films that have never been rented to reduce storage costs and clear shelf space for more popular content.</li>
           <li><strong>Customer Relations:</strong> Develop a loyalty program for the top-ranked customers to enhance retention and encourage continued spending.</li>
           <li><strong>Operations:</strong> Recognize and reward top-performing staff members to boost morale and maintain high productivity.</li>
         </ul>
